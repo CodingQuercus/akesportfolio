@@ -12,7 +12,7 @@ const Footer = () => {
                     <Link href="https://github.com/CodingQuercus" target="_blank" className="text-[#F3F3F3] hover:underline">
                         GitHub
                     </Link>
-                    <Link href="https://se.linkedin.com/" target="_blank" className="text-[#F3F3F3] hover:underline">
+                    <Link href="https://www.linkedin.com/in/akeflatholm " target="_blank" className="text-[#F3F3F3] hover:underline">
                         LinkedIn
                     </Link>
                     <Link href="#contact" className="text-[#F3F3F3] hover:underline">

@@ -1,6 +1,26 @@
 "use client";
 
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { MdOpenInNew } from 'react-icons/md';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+
 export default function Contact() {
+    const [alertMessage, setAlertMessage] = useState("");
+    const email = "akeflatholm@gmail.com";
+    const linkedinUrl = "https://www.linkedin.com/in/akeflatholm";
+
+    const handleCopyEmail = () => {
+        navigator.clipboard.writeText(email).then(() => {
+            setAlertMessage("Email copied!");
+            setTimeout(() => setAlertMessage(""), 2000);
+        });
+    };
+
+    const handleLinkedInRedirect = () => {
+        window.open(linkedinUrl, "_blank");
+    };
+
     return (
         <div
             id="contact"
@@ -11,40 +31,59 @@ export default function Contact() {
             </h1>
 
             <div className="bg-[#282828] p-6 sm:p-8 rounded-lg shadow-lg w-full flex flex-col gap-6">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
-                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">Hey, my name is</p>
-                    <input
-                        type="text"
-                        className="bg-[#F3F3F3] rounded-lg px-4 py-2 flex-grow w-full sm:w-auto"
-                        placeholder="your name..."
-                    />
-                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">and</p>
+                <div className="text-center">
+                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">You can reach me at:</p>
+
+                    <div className="flex flex-col sm:flex-col justify-center items-center gap-4 mt-4">
+                        <span className="text-[#F3F3F3] text-lg sm:text-xl">{email}</span>
+                        <div className="flex flex-row gap-3">
+                            <button
+                                onClick={handleCopyEmail}
+                                className="bg-[#3225C8] text-[#F3F3F3] font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition flex items-center gap-2"
+                            >
+                                <FaEnvelope size={18} /> Copy
+                            </button>
+                            <a
+                                href={`mailto:${email}`}
+                                className="bg-[#3225C8] text-[#F3F3F3] font-bold px-4 py-2 rounded-lg hover:bg-blue-600 transition flex items-center gap-2"
+                            >
+                                <MdOpenInNew size={18} /> Open
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-3">
-                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">I'm working at</p>
-                    <input
-                        type="text"
-                        className="bg-[#F3F3F3] rounded-lg px-4 py-2 flex-grow w-full sm:w-auto"
-                        placeholder="company or organisation..."
-                    />
-                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">and</p>
-                </div>
+                <div className="text-center mt-6">
+                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">Or connect with me on LinkedIn:</p>
 
-                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3">
-                    <p className="text-xl sm:text-2xl text-[#F3F3F3] font-bold">I'd like to say</p>
-                    <textarea
-                        className="bg-[#F3F3F3] rounded-lg px-4 py-2 flex-grow w-full h-32"
-                        placeholder="your message..."
-                    ></textarea>
-                </div>
-
-                <div className="flex justify-end mt-2">
-                    <button className="bg-[#3225C8] text-[#F3F3F3] font-bold px-6 py-3 sm:px-8 sm:py-4 w-full sm:w-[180px] rounded-lg hover:bg-blue-600 transition">
-                        Send
-                    </button>
+                    <div className="flex justify-center mt-4">
+                        <button
+                            onClick={handleLinkedInRedirect}
+                            className="bg-[#3225C8] text-[#F3F3F3] font-bold px-6 py-3 sm:px-8 sm:py-4 rounded-lg hover:bg-blue-600 transition flex items-center gap-2"
+                        >
+                            <FaLinkedin size={18} /> Visit profile
+                        </button>
+                    </div>
                 </div>
             </div>
+
+            {alertMessage && (
+                <motion.div
+                    className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black py-2 px-4 rounded-lg shadow-lg flex items-center gap-2 z-50"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }} 
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                >
+                    <span role="img" aria-label="party-popper">
+                        🎉
+                    </span>
+                    <span>{alertMessage}</span>
+                    <span role="img" aria-label="party-popper">
+                        🎉
+                    </span>
+                </motion.div>
+            )}
         </div>
     );
 }

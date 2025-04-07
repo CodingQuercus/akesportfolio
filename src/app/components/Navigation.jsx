@@ -61,7 +61,7 @@ export default function Navigation() {
                     ))}
                 </div>
 
-                <Link href="/" className="hidden md:flex items-center">
+                <Link href="https://www.linkedin.com/in/akeflatholm" target="_blank" className="hidden md:flex items-center">
                     <motion.div
                         whileHover={{ scale: 1.1 }}
                         transition={{ duration: 0.3 }}
@@ -124,7 +124,7 @@ export default function Navigation() {
                                 </Link>
                             ))}
 
-                            <Link href="/" onClick={toggleMenu}>
+                            <Link href="https://www.linkedin.com/in/akeflatholm" onClick={toggleMenu}>
                                 <Image
                                     src="/images/linkedinlogo.png"
                                     alt="Åke's LinkedIn"
