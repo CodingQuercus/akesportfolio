@@ -106,7 +106,7 @@ export default function Navigation() {
                         >
                             <Link href="/" onClick={toggleMenu}>
                                 <Image
-                                    src="/images/logov2.png"
+                                    src="images/logov2.png"
                                     alt="ÅF Logo"
                                     width={36}
                                     height={36}
@@ -126,7 +126,7 @@ export default function Navigation() {
 
                             <Link href="https://www.linkedin.com/in/akeflatholm" onClick={toggleMenu}>
                                 <Image
-                                    src="/images/linkedinlogo.png"
+                                    src="images/linkedinlogo.png"
                                     alt="Åke's LinkedIn"
                                     width={36}
                                     height={36}
