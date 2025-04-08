@@ -56,8 +56,8 @@ export default function About() {
 
                 <div className="md:w-1/2 flex justify-center items-center">
                     <img
-                        src="/images/portfolio-image.png"
-                        alt="Hero Image"
+                        src="akesportfolio/images/portfolio-image.png"
+                        alt="Image of Åke"
                         width={400}
                         height={400}
                         className="rounded-2xl w-full max-w-[300px] sm:max-w-[400px] h-auto"
