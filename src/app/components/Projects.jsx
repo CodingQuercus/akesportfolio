@@ -19,7 +19,7 @@ export default function Projects() {
                 desc1="A concept application with the goal of reducing loneliness of retirees. Implemented video calls with WebRTC."
                 desc2="Full-stack project."
                 desc3="Developed with Svelte and Supabase."
-                imageUrl="/images/erfaren.png"
+                imageUrl="images/erfaren.png"
                 contribution="My main focus during this project was to work with the UX/UI of the application. 
                 I did code frontend and backend as well. I was part of implementing the WebRTC integration for the video calls."
                 link="/projects/erfaren"
@@ -32,14 +32,9 @@ export default function Projects() {
                 desc1="A mobile game combining Pictionary with Strava."
                 desc2="Full-stack project."
                 desc3="Developed with React Native for the application and Node.JS for the backend."
-                imageUrl="/images/sketchnguesslogo.png"
+                imageUrl="images/sketchnguesslogo.png"
                 contribution="My main focus during this project was to create the server for the game. I implemented a local server using 
                 Node.JS which handled game logic and distributed information to all connected clients."
-                additionalImages={[
-                    "/images/sketchnguess1.png",
-                    "/images/sketchnguess2.png",
-                    "/images/sketchnguess3.png",
-                ]}
                 link="/projects/sketchnguess"
             />
 
@@ -50,7 +45,7 @@ export default function Projects() {
                 desc1="A marketing campaign consisting of a browser game and website for a Swedish company."
                 desc2="Full-stack project."
                 desc3="Developed using React JS, Phaser.IO, C# and ASP.NET Core."
-                imageUrl="/images/fika.png"
+                imageUrl="images/fika.png"
                 contribution="My main focus during this project was to implement the game. Through pair programming with another classmate we implemented the game with Phaser.IO as the game engine."
                 link="/projects/fikaspelet"
             />
