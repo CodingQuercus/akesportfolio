@@ -35,7 +35,7 @@ export default function About() {
                     <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="/cv/Ake_Flatholm_CV.pdf"
+                            href="cv/Ake_Flatholm_CV.pdf"
                             download
                             className="px-5 py-2 w-[120px] sm:w-[140px] border border-[#282828] bg-[#282828] text-[#F3F3F3] rounded-lg shadow-md cursor-pointer text-center"
                         >
@@ -44,7 +44,7 @@ export default function About() {
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            href="/cv/Ake_Flatholm_CV.pdf"
+                            href="cv/Ake_Flatholm_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-5 py-2 w-[120px] sm:w-[140px] border border-[#282828] text-[#282828] rounded-lg shadow-md cursor-pointer text-center"
@@ -56,7 +56,7 @@ export default function About() {
 
                 <div className="md:w-1/2 flex justify-center items-center">
                     <img
-                        src="/images/portfolio-image.png"
+                        src="images/portfolio-image.png"
                         alt="Image of Åke"
                         width={400}
                         height={400}

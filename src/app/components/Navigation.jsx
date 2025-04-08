@@ -35,7 +35,7 @@ export default function Navigation() {
                         className="flex items-center"
                     >
                         <img
-                            src="/images/logov2.png"
+                            src="images/logov2.png"
                             alt="ÅF Logo"
                             width={40}
                             height={40}
