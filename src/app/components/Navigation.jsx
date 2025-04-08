@@ -68,7 +68,7 @@ export default function Navigation() {
                         className="flex items-center"
                     >
                         <img
-                            src="/images/linkedinlogo.png"
+                            src="images/linkedinlogo.png"
                             alt="Åke's LinkedIn"
                             width={36}
                             height={36}
