@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useRef } from "react";
-import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({
@@ -16,24 +16,13 @@ const ProjectCard = ({
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
     const shouldReduceMotion = useReducedMotion();
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
-
-    const containerVariants = {
-        hidden: { opacity: 0, y: 40 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, ease: "easeOut" },
-        },
-    };
 
     return (
         <motion.div
-            ref={ref}
-            variants={containerVariants}
-            initial="hidden"
-            animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 40 }}
+            whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
             className="bg-[#ffffff] rounded-2xl shadow-lg overflow-hidden transition-all"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-8 sm:p-10">
@@ -63,7 +52,7 @@ const ProjectCard = ({
                                 className="overflow-hidden mt-4"
                             >
                                 <p className="text-[#282828] text-sm sm:text-base">
-                                    <strong>What was my focus in the project?:</strong><br />
+                                    <strong>What was my focus in the project?</strong><br />
                                     {contribution}
                                 </p>
                             </motion.div>
@@ -77,8 +66,9 @@ const ProjectCard = ({
                         alt={`${title} image`}
                         loading="lazy"
                         initial={{ opacity: 0 }}
-                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        viewport={{ once: true }}
                         className="rounded-xl w-full max-w-sm sm:max-w-md object-cover"
                     />
                 </div>
