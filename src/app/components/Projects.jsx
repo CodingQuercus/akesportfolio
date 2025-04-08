@@ -25,7 +25,7 @@ export default function Projects() {
                 process="The project began with brainstorming sessions to identify the issues we wanted to address. We conducted interviews with our target group to gather insights and inform our decisions. After defining the design direction, we sketched ideas on paper, followed by prototyping in Figma. We drew inspiration from accessible websites like Skatteverket and 1177 to ensure our platform met WCAG (Web Content Accessibility Guidelines). In the implementation phase, we developed the website using SvelteKit and chose SupaBase for the database due to its real-time features and open-source nature."
                 result="The outcome is a fully functional website where older individuals can create and participate in courses, share their experiences, and engage in video calls with other people eager to learn something new."
                 imageUrl="images/erfaren.png"
-                contribution="My main focus during the project was designing the UI and working on the UX aspects of the platform. This involved researching accessible websites to ensure an intuitive and user-friendly experience. I also contributed to the implementation of the platform, assisting with its development to ensure it met both design and functionality goals."
+                contribution="My main focus during the project was designing the UI and working on the UX aspects of the platform. This involved researching accessible websites to ensure an intuitive and user-friendly experience. I also contributed to the implementation of the platform."
                 link="/projects/erfaren"
             />
 
@@ -42,7 +42,7 @@ export default function Projects() {
                 process="The project started with brainstorming different game ideas centered around creativity and movement. Once we settled on the concept of a GPS-based drawing game, we defined the core features and built initial prototypes. We used React Native for cross-platform development, and integrated libraries like react-native-maps for GPS tracking and socket.io for real-time communication."
                 result="The result is a fully functional mobile game where players can create drawings based on their GPS coordinates, share their creations with others, and guess each other’s drawings in a fun and interactive environment. The game encourages creativity and social interaction while offering a unique take on location-based gaming."
                 imageUrl="images/sketchnguesslogo.png"
-                contribution="My main focus during the project was implementing the backend. I worked with Node.js to set up a local server that managed all communication between clients, ensuring real-time interaction. Additionally, I handled the game logic and contributed to the development of the React Native application, helping to bring the game to life on both iOS and Android platforms."
+                contribution="My main focus during the project was implementing the backend. I worked with Node.js to set up a local server that managed all communication between clients, ensuring real-time interaction. Additionally, I handled the game logic and contributed to the development of the React Native application."
                 link="/projects/sketchnguess"
             />
 
