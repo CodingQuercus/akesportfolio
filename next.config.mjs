@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    basePath: '/akesportfolio'
-
+    assetPrefix: '/akesportfolio',
+  basePath: '/akesportfolio',
+  trailingSlash: true,
 };
 
 export default nextConfig;
