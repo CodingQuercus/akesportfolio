@@ -30,7 +30,7 @@ export default function Contact() {
             <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-2">
                 Contact
             </h1>
-            <p className="text-left text-[#282828] text-base sm:text-lg pb-2">
+            <p className="text-left text-[#282828] text-base sm:text-base pb-2">
                 Got a project in mind, a question to ask, or just want to say hi? Feel free to reach out!
             </p>
 

@@ -13,7 +13,7 @@ export default function About() {
             </h1>
             <div className="bg-[#FFFFFF] rounded-2xl shadow-lg px-6 py-8 flex flex-col md:flex-row gap-10">
                 <div className="md:w-1/2 flex flex-col text-left md:text-left">
-                    <p className="text-base sm:text-lg text-[#282828] font-normal leading-relaxed">
+                    <p className="text-base sm:text-base text-[#282828] font-normal leading-relaxed">
                         Hey! I’m Åke, a fourth-year student in the M.Sc. programme in Interaction
                         Technology and Design at Umeå University. This spring, I’m finishing my final
                         courses before starting my master’s thesis in the fall.
