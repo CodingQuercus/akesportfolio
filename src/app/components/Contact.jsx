@@ -29,8 +29,8 @@ export default function Contact() {
             <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-2">
                 Contact
             </h1>
-            <p className="text-left text-[#282828] text-base sm:text-lg max-w-xl pb-4">
-                Whether you want to collaborate, ask a question, or just say hi!
+            <p className="text-left text-[#282828] text-base sm:text-lg pb-2">
+                Got a project in mind, a question to ask, or just want to say hi? Feel free to reach out!
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl sm:max-w-full">
@@ -38,7 +38,10 @@ export default function Contact() {
                     whileHover={{ scale: 1.03 }}
                     className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200"
                 >
-                    <FaEnvelope size={36} className="text-[#3487EA] mb-4" />
+                    <FaEnvelope 
+                        size={36} 
+                        className="text-[#3487EA] mb-4" 
+                        />
                     <h2 className="text-xl font-semibold mb-2 text-[#282828]">Email me</h2>
                     <p className="text-[#282828] text-sm mb-4">{email}</p>
                     <div className="flex gap-3">
