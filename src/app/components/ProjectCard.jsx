@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({
@@ -15,16 +15,9 @@ const ProjectCard = ({
     contribution,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
-    const shouldReduceMotion = useReducedMotion();
 
     return (
-        <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 40 }}
-            whileInView={shouldReduceMotion ? {} : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
-            className="bg-[#ffffff] rounded-2xl shadow-lg overflow-hidden transition-all"
-        >
+        <div className="bg-[#ffffff] rounded-2xl shadow-lg overflow-hidden transition-all">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-8 sm:p-10">
                 <div className="flex flex-col justify-center items-start">
                     <h2 className="text-base sm:text-lg text-[#282828] mb-1">{year}</h2>
@@ -48,7 +41,7 @@ const ProjectCard = ({
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.3, ease: "easeOut" }}
+                                transition={{ duration: 0.6, ease: "easeInOut" }}
                                 className="overflow-hidden mt-4"
                             >
                                 <p className="text-[#282828] text-sm sm:text-base">
@@ -61,19 +54,15 @@ const ProjectCard = ({
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <motion.img
+                    <img
                         src={imageUrl}
                         alt={`${title} image`}
                         loading="lazy"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        viewport={{ once: true }}
                         className="rounded-xl w-full max-w-sm sm:max-w-md object-cover"
                     />
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 };
 

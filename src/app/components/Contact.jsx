@@ -24,7 +24,7 @@ export default function Contact() {
     return (
         <div
             id="contact"
-            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[40px] flex flex-col"
+            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[20px] flex flex-col"
         >
             <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-4">
                 Contact

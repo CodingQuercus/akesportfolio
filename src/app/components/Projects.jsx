@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <div
             id="projects"
-            className="bg-[#f3f3f3] min-h-screen flex flex-col gap-6 px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[40px]"
+            className="bg-[#f3f3f3] min-h-screen flex flex-col gap-6 px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[20px]"
         >
             <h1 className="text-3xl sm:text-4xl text-[#000] font-bold font-inter text-left pb-6">
                 Projects

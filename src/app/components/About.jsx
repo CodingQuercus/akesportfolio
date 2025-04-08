@@ -8,9 +8,9 @@ export default function About() {
     return (
         <div
             id="about"
-            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[40px]"
+            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[20px]"
         >
-            <h1 className="text-3xl sm:text-4xl text-[#000] font-bold font-inter text-left pb-8">
+            <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-8">
                 About me
             </h1>
             <div className="flex flex-col md:flex-row gap-10">
