@@ -56,7 +56,7 @@ export default function About() {
 
                 <div className="md:w-1/2 flex justify-center items-center">
                     <img
-                        src="akesportfolio/images/portfolio-image.png"
+                        src="/images/portfolio-image.png"
                         alt="Image of Åke"
                         width={400}
                         height={400}
