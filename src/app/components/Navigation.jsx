@@ -53,7 +53,7 @@ export default function Navigation() {
                         >
                             <Link
                                 href={href}
-                                className="border border-[#282828] bg-[#F3F3F3] rounded-lg px-4 py-2 text-center text-sm md:text-base transition-colors duration-300 hover:bg-[#282828] hover:text-[#f3f3f3]"
+                                className="border border-[#282828] bg-[#F3F3F3]  rounded-lg px-4 py-2 text-center text-sm md:text-base transition-colors duration-300 hover:bg-[#282828] hover:text-[#f3f3f3]"
                             >
                                 {label}
                             </Link>

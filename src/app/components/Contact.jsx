@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
     const [alertMessage, setAlertMessage] = useState("");
+
     const email = "akeflatholm@gmail.com";
     const linkedinUrl = "https://www.linkedin.com/in/akeflatholm";
 
@@ -35,44 +36,48 @@ export default function Contact() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl sm:max-w-full">
                 <motion.div
-                    whileHover={{ scale: 1.03 }}
                     className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200"
                 >
-                    <FaEnvelope 
-                        size={36} 
-                        className="text-[#3487EA] mb-4" 
-                        />
+                    <FaEnvelope
+                        size={36}
+                        className="text-[#282828] mb-4"
+                    />
                     <h2 className="text-xl font-semibold mb-2 text-[#282828]">Email me</h2>
                     <p className="text-[#282828] text-sm mb-4">{email}</p>
                     <div className="flex gap-3">
-                        <button
+                        <motion.button
                             onClick={handleCopyEmail}
-                            className="bg-[#3487EA] hover:bg-[#0957a6] text-[#F3F3F3] px-4 py-2 rounded-lg flex items-center gap-2 transition cursor-pointer"
+                            className="bg-[#282828] text-[#F3F3F3] px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                         >
                             <FaEnvelope size={16} /> Copy
-                        </button>
-                        <a
+                        </motion.button>
+                        <motion.a
                             href={`mailto:${email}`}
-                            className="bg-[#3487EA] hover:bg-[#0957a6] text-[#F3F3F3] px-4 py-2 rounded-lg flex items-center gap-2 transition cursor-pointer"
+                            className="bg-[#282828] text-[#F3F3F3] px-4 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                         >
                             <MdOpenInNew size={16} /> Open
-                        </a>
+                        </motion.a>
                     </div>
                 </motion.div>
 
                 <motion.div
-                    whileHover={{ scale: 1.03 }}
                     className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-200"
                 >
-                    <FaLinkedin size={36} className="text-[#3487EA] mb-4" />
+                    <FaLinkedin size={36} className="text-[#282828] mb-4" />
                     <h2 className="text-xl font-semibold mb-2 text-[#282828]">LinkedIn</h2>
                     <p className="text-[#282828] text-sm mb-4">Connect with me on LinkedIn</p>
-                    <button
+                    <motion.button
                         onClick={handleLinkedInRedirect}
-                        className="bg-[#3487EA] hover:bg-[#0957a6] text-[#F3F3F3] px-5 py-2 rounded-lg flex items-center gap-2 transition cursor-pointer"
+                        className="bg-[#282828] text-[#F3F3F3] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer"
+                        whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
                     >
                         <FaLinkedin size={16} /> Visit
-                    </button>
+                    </motion.button>
                 </motion.div>
             </div>
 

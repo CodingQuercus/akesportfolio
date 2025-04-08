@@ -22,7 +22,7 @@ export default function Hero() {
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                     className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#282828] font-normal leading-normal font-sans mt-4 sm:mt-6"
                 >
-                    MSc Student in Interaction Technology and Design
+                    M.Sc. Student in Interaction Technology and Design
                 </motion.p>
 
                 <motion.div

@@ -1,8 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function About() {
     return (
@@ -13,10 +11,10 @@ export default function About() {
             <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-2">
                 About me
             </h1>
-            <div className="flex flex-col md:flex-row gap-10">
+            <div className="bg-[#FFFFFF] rounded-2xl shadow-lg px-6 py-8 flex flex-col md:flex-row gap-10">
                 <div className="md:w-1/2 flex flex-col text-left md:text-left">
                     <p className="text-base sm:text-lg text-[#282828] font-normal leading-relaxed">
-                        Hey! I’m Åke, a fourth-year student in the MSc programme in Interaction
+                        Hey! I’m Åke, a fourth-year student in the M.Sc. programme in Interaction
                         Technology and Design at Umeå University. This spring, I’m finishing my final
                         courses before starting my master’s thesis in the fall.
                         <br />
@@ -30,8 +28,8 @@ export default function About() {
                         playing music.
                     </p>
 
-                    <h3 className="font-bold text-center pt-10 md:text-left">Download or view my CV</h3>
-                    <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <h3 className="font-bold text-center pt- mt-auto md:text-left">Download or view my CV</h3>
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
                     <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
