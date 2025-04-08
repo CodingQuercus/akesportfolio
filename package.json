@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "homepage": "https://codingquercus.github.io/akesportfolio",
   "dependencies": {
     "framer-motion": "^12.6.3",
     "lucide-react": "^0.487.0",
