@@ -32,12 +32,6 @@ const ProjectCard = ({
                     <p className="text-base text-[#282828] mb-2">{desc1}</p>
                     <p className="text-base text-[#282828] mb-2">{desc2}</p>
                     <p className="text-base text-[#282828] mb-2">{desc3}</p>
-                    <button
-                        onClick={() => setIsExpanded(!isExpanded)}
-                        className="mt-4 text-sm text-[#3487EA] hover:underline cursor-pointer"
-                    >
-                        {isExpanded ? "Show less" : "Show more"}
-                    </button>
                 </div>
 
                 <div className="flex justify-center items-center">
@@ -49,6 +43,12 @@ const ProjectCard = ({
                     />
                 </div>
             </div>
+            <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="mt-4 ml-10 mb-4 text-md text-[#3487EA] hover:underline cursor-pointer"
+            >
+                {isExpanded ? "Show less" : "Show more"}
+            </button>
             <motion.div
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: isExpanded ? 1 : 0, height: isExpanded ? "auto" : 0 }}
@@ -63,7 +63,7 @@ const ProjectCard = ({
                         <p className="text-base mb-4"><strong>Why have we done it?</strong><br />{why}</p>
                         <p className="text-base mb-4"><strong>Process</strong><br />{process}</p>
                         <p className="text-base mb-4"><strong>Result</strong><br />{result}</p>
-                        <p className="text-[#282828] text-sm sm:text-base">
+                        <p className="text-[#282828] text-md sm:text-base">
                             <strong>Individual contribution</strong><br />
                             {contribution}
                         </p>
