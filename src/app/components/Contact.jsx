@@ -24,12 +24,12 @@ export default function Contact() {
     return (
         <div
             id="contact"
-            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-[80px] pb-[20px] flex flex-col"
+            className="bg-[#f3f3f3] min-h-screen px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] pt-24 pb-[20px] flex flex-col"
         >
-            <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-4">
+            <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-2">
                 Contact
             </h1>
-            <p className="text-left text-[#282828] text-base sm:text-lg max-w-xl pb-10">
+            <p className="text-left text-[#282828] text-base sm:text-lg max-w-xl pb-4">
                 Whether you want to collaborate, ask a question, or just say hi!
             </p>
 
