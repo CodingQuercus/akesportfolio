@@ -35,7 +35,7 @@ export default function Hero() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-5 py-2 sm:px-6 sm:py-3 border border-[#282828] bg-[#282828] text-[#F3F3F3] rounded-lg shadow-md text-sm sm:text-base"
+                            className="px-5 py-2 sm:px-6 sm:py-3 border border-[#282828] bg-[#282828] text-[#F3F3F3] rounded-lg shadow-md text-sm sm:text-base cursor-pointer"
                         >
                             Projects
                         </motion.button>
@@ -44,7 +44,7 @@ export default function Hero() {
                         <motion.button
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="px-5 py-2 sm:px-6 sm:py-3 border border-[#282828] text-[#282828] rounded-lg shadow-md text-sm sm:text-base"
+                            className="px-5 py-2 sm:px-6 sm:py-3 border border-[#282828] text-[#282828] rounded-lg shadow-md text-sm sm:text-base cursor-pointer"
                         >
                             Contact
                         </motion.button>

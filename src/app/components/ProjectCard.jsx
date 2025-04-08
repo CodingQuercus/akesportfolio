@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useRef } from "react";
+import { motion, AnimatePresence, useInView, useReducedMotion } from "framer-motion";
 import PropTypes from "prop-types";
 
 const ProjectCard = ({
@@ -15,13 +15,25 @@ const ProjectCard = ({
     contribution,
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const shouldReduceMotion = useReducedMotion();
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+
+    const containerVariants = {
+        hidden: { opacity: 0, y: 40 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: "easeOut" },
+        },
+    };
 
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
+            ref={ref}
+            variants={containerVariants}
+            initial="hidden"
+            animate={isInView && !shouldReduceMotion ? "visible" : "hidden"}
             className="bg-[#ffffff] rounded-2xl shadow-lg overflow-hidden transition-all"
         >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-8 sm:p-10">
@@ -36,7 +48,7 @@ const ProjectCard = ({
 
                     <button
                         onClick={() => setIsExpanded(!isExpanded)}
-                        className="mt-4 text-sm text-[#3487EA] hover:underline"
+                        className="mt-4 text-sm text-[#3487EA] hover:underline cursor-pointer"
                     >
                         {isExpanded ? "Show less" : "Show more"}
                     </button>
@@ -47,7 +59,7 @@ const ProjectCard = ({
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.4 }}
+                                transition={{ duration: 0.3, ease: "easeOut" }}
                                 className="overflow-hidden mt-4"
                             >
                                 <p className="text-[#282828] text-sm sm:text-base">
@@ -60,9 +72,13 @@ const ProjectCard = ({
                 </div>
 
                 <div className="flex justify-center items-center">
-                    <img
+                    <motion.img
                         src={imageUrl}
                         alt={`${title} image`}
+                        loading="lazy"
+                        initial={{ opacity: 0 }}
+                        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                         className="rounded-xl w-full max-w-sm sm:max-w-md object-cover"
                     />
                 </div>

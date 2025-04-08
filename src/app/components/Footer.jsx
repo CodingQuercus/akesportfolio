@@ -20,7 +20,7 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div className="text-[#F3F3F3] text-sm sm:text-base text-center sm:text-right">
-                    Developed by <strong>Åke Flatholm</strong> @ 2025.
+                    Developed by <strong>Åke Flatholm</strong> with <strong>Next.JS</strong> @ 2025.
                 </div>
             </div>
         </footer>
