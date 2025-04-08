@@ -21,7 +21,7 @@ const Footer = () => {
                 </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-0">
+            <div className="flex flex-col sm:flex-row justify-between md:items-center gap-4 sm:gap-0">
                 <div className="flex flex-row gap-6 text-sm sm:text-base">
                     <motion.a
                         href="https://github.com/CodingQuercus"
@@ -48,7 +48,7 @@ const Footer = () => {
                     </motion.a>
                 </div>
 
-                <div className="text-[#F3F3F3] text-sm sm:text-base text-center sm:text-right">
+                <div className="text-[#F3F3F3] text-sm sm:text-base sm:text-center">
                     Built with <strong>Next.js</strong> by <strong>Åke Flatholm</strong> © 2025
                 </div>
             </div>
