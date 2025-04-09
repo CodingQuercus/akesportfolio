@@ -92,7 +92,7 @@ export default function Navigation() {
                     onClick={toggleMenu}
                     aria-label="Toggle menu"
                 >
-                    {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    {isMenuOpen ? <X size={28} className="text-[#F3F3F3]" /> : <Menu size={28} />}
                 </button>
             </motion.nav>
 
