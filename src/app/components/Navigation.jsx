@@ -47,7 +47,6 @@ export default function Navigation() {
                 <Link href="/" className="flex items-center">
                     <motion.div
                         whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
                         className="flex items-center"
                     >
                         <img
@@ -80,7 +79,6 @@ export default function Navigation() {
                 <Link href="https://www.linkedin.com/in/akeflatholm" target="_blank" className="hidden md:flex items-center">
                     <motion.div
                         whileHover={{ scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
                         className="flex items-center"
                     >
                         <FaLinkedin size={32}/>
