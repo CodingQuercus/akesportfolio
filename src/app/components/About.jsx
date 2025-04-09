@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { MdOpenInNew, MdDownload } from 'react-icons/md';
 
 export default function About() {
     return (
@@ -28,16 +29,16 @@ export default function About() {
                         playing music.
                     </p>
 
-                    <h3 className="font-bold text-center pt- mt-auto md:text-left">Download or view my CV</h3>
+                    <h3 className="font-bold mt-8 text-center md:text-left sm:mt-auto">Download or view my CV</h3>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4 mt-2">
-                    <motion.a
+                        <motion.a
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             href="cv/Ake_Flatholm_CV.pdf"
                             download
-                            className="px-5 py-2 w-[120px] sm:w-[140px] border border-[#282828] bg-[#282828] text-[#F3F3F3] rounded-lg shadow-md cursor-pointer text-center"
+                            className="flex flex-row justify-center items-center gap-2 px-5 py-2 w-[140px] border border-[#282828] bg-[#282828] text-[#F3F3F3] rounded-lg shadow-md cursor-pointer text-center"
                         >
-                            Download
+                            <MdDownload /> Download
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
@@ -45,9 +46,9 @@ export default function About() {
                             href="cv/Ake_Flatholm_CV.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-5 py-2 w-[120px] sm:w-[140px] border border-[#282828] text-[#282828] rounded-lg shadow-md cursor-pointer text-center"
+                            className="flex flex-row justify-center items-center gap-2 px-5 py-2 w-[140px] border border-[#282828] text-[#282828] rounded-lg shadow-md cursor-pointer text-center"
                         >
-                            View
+                            <MdOpenInNew size={16} /> View
                         </motion.a>
                     </div>
                 </div>

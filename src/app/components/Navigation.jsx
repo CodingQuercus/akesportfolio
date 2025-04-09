@@ -4,9 +4,22 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+import { FaLinkedin } from 'react-icons/fa';
+
+
 export default function Navigation() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     useEffect(() => {
         setHasAnimated(true);
@@ -23,7 +36,10 @@ export default function Navigation() {
     return (
         <>
             <motion.nav
-                className="flex justify-between items-center px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-6 shadow-md sticky top-0 bg-[#F3F3F3] z-20"
+                className={`flex justify-between items-center px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-6 shadow-md sticky top-0 z-20 transition-all duration-300 ${isScrolled
+                        ? "backdrop-blur-md bg-[#f3f3f3"
+                        : "bg-transparent"
+                    }`}
                 initial={hasAnimated ? {} : { opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
@@ -53,7 +69,7 @@ export default function Navigation() {
                         >
                             <Link
                                 href={href}
-                                className="border border-[#282828] bg-[#F3F3F3]  rounded-lg px-4 py-2 text-center text-sm md:text-base transition-colors duration-300 hover:bg-[#282828] hover:text-[#f3f3f3]"
+                                className="border border-[#282828] bg-transparent  rounded-lg px-4 py-2 text-center text-sm md:text-base transition-colors duration-300 hover:bg-[#282828] hover:text-[#f3f3f3]"
                             >
                                 {label}
                             </Link>
@@ -67,13 +83,7 @@ export default function Navigation() {
                         transition={{ duration: 0.3 }}
                         className="flex items-center"
                     >
-                        <img
-                            src="images/linkedinlogo.png"
-                            alt="Åke's LinkedIn"
-                            width={36}
-                            height={36}
-                            className="object-contain"
-                        />
+                        <FaLinkedin size={32}/>
                     </motion.div>
                 </Link>
 
@@ -106,7 +116,7 @@ export default function Navigation() {
                         >
                             <Link href="/" onClick={toggleMenu}>
                                 <Image
-                                    src="images/logov2.png"
+                                    src="/images/logov2.png"
                                     alt="ÅF Logo"
                                     width={36}
                                     height={36}
@@ -117,21 +127,15 @@ export default function Navigation() {
                                 <Link
                                     key={href}
                                     href={href}
-                                    className="text-lg border border-[#282828] rounded-lg px-4 py-2 hover:bg-[#282828] hover:text-[#f3f3f3] transition"
+                                    className="text-lg border text-center border-[#282828] rounded-lg px-4 py-2 hover:bg-[#282828] hover:text-[#f3f3f3] transition"
                                     onClick={toggleMenu}
                                 >
                                     {label}
                                 </Link>
                             ))}
 
-                            <Link href="https://www.linkedin.com/in/akeflatholm" onClick={toggleMenu}>
-                                <Image
-                                    src="images/linkedinlogo.png"
-                                    alt="Åke's LinkedIn"
-                                    width={36}
-                                    height={36}
-                                    className="mt-auto"
-                                />
+                            <Link href="https://www.linkedin.com/in/akeflatholm" onClick={toggleMenu} target="_blank">
+                                <FaLinkedin size={32}/>
                             </Link>
                         </motion.aside>
                     </>
