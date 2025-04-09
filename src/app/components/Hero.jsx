@@ -7,8 +7,7 @@ export default function Hero() {
     return (
         <div 
         className="flex flex-col h-screen px-6 sm:px-12 md:px-[80px] lg:px-[160px] xl:px-[240px] bg-cover bg-center"
-        style={{ backgroundImage: "url('images/background3.png')" }}
-
+            style={{ background: "linear-gradient(45deg, #3487EA, #00ACFA, #00CAE5, #00E2B8, #90F289, #F9F871)" }}
         >
             <div className="flex flex-col items-center justify-center flex-grow text-center">
                 <motion.h1
