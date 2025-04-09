@@ -14,7 +14,7 @@ export default function Navigation() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
+            setIsScrolled(window.scrollY > 10);
         };
 
         window.addEventListener("scroll", handleScroll);
@@ -37,7 +37,7 @@ export default function Navigation() {
         <>
             <motion.nav
                 className={`flex justify-between items-center px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-6 shadow-md sticky top-0 z-20 transition-all duration-300 ${isScrolled
-                        ? "backdrop-blur-md bg-[#f3f3f3"
+                        ? "backdrop-blur-md"
                         : "bg-transparent"
                     }`}
                 initial={hasAnimated ? {} : { opacity: 0, y: -50 }}
