@@ -116,7 +116,7 @@ export default function Navigation() {
                         >
                             <Link href="/" onClick={toggleMenu}>
                                 <Image
-                                    src="/images/logov2.png"
+                                    src="images/logov2.png"
                                     alt="ÅF Logo"
                                     width={36}
                                     height={36}
