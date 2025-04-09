@@ -10,16 +10,6 @@ import { FaLinkedin } from 'react-icons/fa';
 export default function Navigation() {
     const [hasAnimated, setHasAnimated] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     useEffect(() => {
         setHasAnimated(true);
@@ -36,10 +26,7 @@ export default function Navigation() {
     return (
         <>
             <motion.nav
-                className={`flex justify-between items-center px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-6 shadow-md sticky top-0 z-20 transition-all duration-300 ${isScrolled
-                        ? "backdrop-blur-md"
-                        : "bg-transparent"
-                    }`}
+                className={`flex justify-between items-center px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-6 shadow-md fixed top-0 left-0 w-full z-20 transition-all duration-300 backdrop-blur-md`}
                 initial={hasAnimated ? {} : { opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
