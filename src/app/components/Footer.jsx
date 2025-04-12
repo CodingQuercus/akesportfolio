@@ -26,7 +26,7 @@ const Footer = () => {
                     <motion.a
                         href="https://github.com/CodingQuercus"
                         target="_blank"
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
                     >
                         <FaGithub /> GitHub
@@ -34,14 +34,14 @@ const Footer = () => {
                     <motion.a
                         href="https://www.linkedin.com/in/akeflatholm"
                         target="_blank"
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
                     >
                         <FaLinkedin /> LinkedIn
                     </motion.a>
                     <motion.a
                         href="#contact"
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.05 }}
                         className="flex items-center gap-2 text-[#F3F3F3] hover:underline transition"
                     >
                         <FaEnvelope /> Contact
