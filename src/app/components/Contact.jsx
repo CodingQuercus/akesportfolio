@@ -30,9 +30,6 @@ export default function Contact() {
             <h1 className="text-3xl sm:text-4xl text-[#282828] font-bold font-inter text-left pb-2">
                 Contact
             </h1>
-            <p className="text-left text-[#282828] text-base sm:text-base pb-2">
-                Got a project in mind, a question to ask, or just want to say hi? Feel free to reach out!
-            </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-4xl sm:max-w-full">
                 <motion.div
@@ -42,7 +39,7 @@ export default function Contact() {
                         size={36}
                         className="text-[#282828] mb-4"
                     />
-                    <h2 className="text-xl font-semibold mb-2 text-[#282828]">Email me</h2>
+                    <h2 className="text-xl font-semibold mb-2 text-[#282828]">Email</h2>
                     <p className="text-[#282828] text-sm mb-4">{email}</p>
                     <div className="flex gap-3">
                         <motion.button
@@ -69,7 +66,7 @@ export default function Contact() {
                 >
                     <FaLinkedin size={36} className="text-[#282828] mb-4" />
                     <h2 className="text-xl font-semibold mb-2 text-[#282828]">LinkedIn</h2>
-                    <p className="text-[#282828] text-sm mb-4">Connect with me on LinkedIn</p>
+                    <p className="text-[#282828] text-sm mb-4">Connect with me!</p>
                     <motion.button
                         onClick={handleLinkedInRedirect}
                         className="bg-[#282828] text-[#F3F3F3] px-5 py-2 rounded-lg flex items-center gap-2 cursor-pointer"

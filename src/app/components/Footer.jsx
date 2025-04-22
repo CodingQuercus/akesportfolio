@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#282828] border-t border-[#444] px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-8 flex flex-col gap-6">
+        <footer className="bg-[#282828] border-t px-6 sm:px-10 md:px-20 lg:px-[160px] xl:px-[240px] py-8 flex flex-col gap-6">
             <div>
                 <h3 className="text-[#F3F3F3] font-semibold text-lg sm:text-xl">
                     Have a project in mind?
